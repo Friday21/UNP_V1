@@ -15,7 +15,7 @@ PORT = 3000
 def child_handler(signum, frame):
     """防止子进程僵死"""
     pid = True
-    while pid:
+    while pid:  # 等待所有子进程终止， uninx信号是不排队的，如果只等待第一个（或用wait函数)，那么很可能留下其它子进程
         pid = os.waitpid(-1, 0)
         if pid:
             print('close child process:{}'.format(pid))

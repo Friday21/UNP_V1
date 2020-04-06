@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Page 106, 图5-7 TCP回射服务器（信号处理）
+Page 133, 图6-9 TCP回射服务器（I/O复用）——client
 """
 import os
 import socket
